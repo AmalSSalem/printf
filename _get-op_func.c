@@ -4,6 +4,8 @@
  * get_op_func - a function that takes the format directives and prints
  * the right format
  * @format: a string character
+ * @f_list: list of functions
+ * @arg: variadic list passed with multible inputs
  * Return: the total num of characters printed
  */
 
