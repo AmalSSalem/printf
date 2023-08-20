@@ -12,7 +12,6 @@ int char_print(va_list arg)
 	return (1);
 }
 
-
 /**
  * str_print - a function that prints a string
  * @arg: argument pointers
@@ -31,6 +30,11 @@ int str_print(va_list arg)
 	return (i);
 }
 
+/**
+ * percent_print - a function that prints a '%'
+ * @arg: argument pointers
+ * Return: number of characters printed
+ */
 int percent_print(va_list arg)
 {
 	_putchar(va_arg(arg, int));
