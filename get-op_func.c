@@ -42,3 +42,4 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 	}
 	return (char_count);
 }
+
