@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 	fmt_t f_list[] = {
 		{"c", char_print},
 		{"s", str_print},
-		/*{"%", percent_print},*/
+		{"%", percent_print},
+		{"d", int_print},
 		{NULL, NULL}
 	};
 
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	char_count = get_op_func(format, f_list, arg);
+	char_count = get_func(format, f_list, arg);
 	va_end(arg);
 	return (char_count);
 }

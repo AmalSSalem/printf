@@ -31,8 +31,36 @@ int str_print(va_list arg)
 	return (i);
 }
 
-int percent_print(va_list arg)
+
+/**
+ * percent_print - a function that prints a percent
+ * @arg: argument pointer
+ * Return: 1 on success
+ */
+int percent_print(va_list arg __attribute__((unused)))
 {
-	_putchar(va_arg(arg, int));
+	_putchar('%');
+	return (1);
+}
+
+
+/**
+ * int_print - a function that prints an integer
+ * @arg: argument pointer
+ * Return: 1 on success
+ */
+int int_print(va_list arg)
+{
+	int num, tmp;
+
+	num = va_arg(arg, int);
+
+	if (num > 0)
+	{
+		tmp = num / 10;
+		num = num % 10;
+		_putchar('0' + tmp);
+		_putchar('0' + num);
+	}
 	return (1);
 }

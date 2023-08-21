@@ -21,6 +21,7 @@ typedef struct prnt
 	int (*fmt_func)(va_list);
 } fmt_t;
 
+int get_func(const char *, fmt_t f_list[], va_list);
 int _putchar(char c);
 int get_op_func(const char *, fmt_t f_list[], va_list arg);
 int char_print(va_list);
