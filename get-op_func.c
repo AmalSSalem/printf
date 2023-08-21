@@ -38,9 +38,19 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 				}
 				j++;
 			}
+			if (f_list[j].s == NULL && *(format + 1) != '\0')
+			{
+				_putchar(*(format - 1));
+				_putchar(*format);
+				char_count += 2;
+			}
+			else
+				return (-1);
+
 			state = 0;
 		}
 		format++;
 	}
 	return (char_count);
 }
+
