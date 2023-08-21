@@ -25,11 +25,11 @@ int str_print(va_list arg)
 
 	str = va_arg(arg, char *);
 	if (str == NULL)
-		str = "(nil)";
+		return (-1);	
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
-	return (i);
+	return (1);
 }
 
 
