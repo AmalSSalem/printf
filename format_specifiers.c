@@ -29,7 +29,7 @@ int str_print(va_list arg)
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
-	return (1);
+	return (i);
 }
 
 
