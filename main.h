@@ -15,12 +15,12 @@ int _printf(const char *format, ...);
  * @s: the operator in strings
  * @fmt_func: the function pointer
  */
-typedef struct prnt
+struct prnt
 {
 	char *s;
 	int (*fmt_func)(va_list);
-} fmt_t;
-
+};
+typedef struct prnt fmt_t;
 int get_func(const char *, fmt_t f_list[], va_list);
 int _putchar(char c);
 int get_op_func(const char *, fmt_t f_list[], va_list arg);
