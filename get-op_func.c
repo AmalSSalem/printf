@@ -1,12 +1,10 @@
 #include "main.h"
 
-
 /**
  * get_func - a function that checks for specifiers
  * @format: string format
  * @f_list: an array of structures
  * @arg: argument pointer
- *
  * Return: the lenght of the string
  */
 int get_func(const char *format, fmt_t f_list[], va_list arg)
@@ -46,11 +44,9 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 			}
 			else
 				return (-1);
-
 			state = 0;
 		}
 		format++;
 	}
 	return (char_count);
 }
-
