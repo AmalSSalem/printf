@@ -15,17 +15,21 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 	{
 		if (state == 0)
 		{
-			if (*format == '%' && (format[1] == f_list[0].s[0] ||
-						format[1] == f_list[1].s[0] ||
-						format[1] == f_list[2].s[0] ||
-						format[1] == f_list[3].s[0] ||
-						format[1] == f_list[4].s[0]))
-				state = 1;
-			else
+			if (*format == '%')
 			{
-				_putchar(*format);
-				char_count++;
+				j = 0;
+				while (f_list[j].s != NULL)
+				{
+					if (format[1] == f_list[j].s[0])
+					{
+						state = 1;
+						break;
+					}
+					j++;
+				}	
 			}
+			_putchar(*format);
+			char_count++;
 		}
 		else if (state == 1)
 		{
