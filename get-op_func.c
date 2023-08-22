@@ -16,18 +16,7 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 		if (state == 0)
 		{
 			if (*format == '%')
-			{
-				j = 0;
-				while (f_list[j].s)
-				{
-					if (format[1] == f_list[j].s[0])
-					{
-						state = 1;
-						break;
-					}
-					j++;
-				}
-			}
+				state = checker((format + 1), f_list);
 			else
 			{
 				_putchar(*format);
@@ -52,4 +41,22 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 		format++;
 	}
 	return (char_count);
+}
+/**
+ * checker - to check if char is in specifier list
+ * @p: the char to check
+ * @f_list: the list of specifiers
+ * Return: state 1 if it exists in specifiers
+ */
+int checker(const char *p, fmt_t f_list[])
+{
+	int j;
+
+	j = 0;
+	while (f_list[j].s)
+	{
+		if (*p == f_list[j].s[0])
+			return (1);
+	}
+	return (0);
 }

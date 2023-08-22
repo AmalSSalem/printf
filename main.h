@@ -1,15 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/*************** INCLUDES *******************/
 #include <limits.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-
-int _printf(const char *format, ...);
-
+/*************** STRUCTS ******************/
 /**
  * struct prnt - a data type for format specifier and functions
  * @s: the operator in strings
@@ -21,6 +20,9 @@ struct prnt
 	int (*fmt_func)(va_list);
 };
 typedef struct prnt fmt_t;
+/************** FUNCTIONS ****************/
+int _printf(const char *format, ...);
+int checker(const char *p, fmt_t f_list[]);
 int get_func(const char *, fmt_t f_list[], va_list);
 int _putchar(char c);
 int get_op_func(const char *, fmt_t f_list[], va_list arg);
