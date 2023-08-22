@@ -26,7 +26,7 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 						break;
 					}
 					j++;
-				}	
+				}
 			}
 			_putchar(*format);
 			char_count++;
