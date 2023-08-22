@@ -34,6 +34,8 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 				if (*format == f_list[j].s[0])
 				{
 					val = f_list[j].fmt_func(arg);
+					if (val == -1)
+						return (-1);
 					char_count += val;
 					break;
 				}
