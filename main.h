@@ -28,5 +28,6 @@ int char_print(va_list);
 int str_print(va_list);
 int percent_print(va_list);
 int int_print(va_list);
+int num_print(va_list);
 #endif
 
