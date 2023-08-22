@@ -19,7 +19,7 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 			{
 				state = checker((format + 1), f_list);
 				if (state == 0)
-					_putchar(*format);
+					char_count += _putchar(*format);
 			}
 			else
 			{
