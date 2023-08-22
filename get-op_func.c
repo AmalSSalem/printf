@@ -18,7 +18,7 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 			if (*format == '%')
 			{
 				j = 0;
-				while (f_list[j].s != NULL)
+				while (f_list[j].s)
 				{
 					if (format[1] == f_list[j].s[0])
 					{
@@ -28,8 +28,11 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 					j++;
 				}
 			}
-			_putchar(*format);
-			char_count++;
+			else
+			{
+				_putchar(*format);
+				char_count++;
+			}
 		}
 		else if (state == 1)
 		{
@@ -50,4 +53,3 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 	}
 	return (char_count);
 }
-
