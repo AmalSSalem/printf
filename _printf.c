@@ -26,6 +26,11 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+
 	char_count = get_func(format, f_list, arg);
 	va_end(arg);
 	return (char_count);

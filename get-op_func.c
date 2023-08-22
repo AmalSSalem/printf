@@ -16,7 +16,11 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 		if (state == 0)
 		{
 			if (*format == '%')
+			{
 				state = checker((format + 1), f_list);
+				if (state == 0)
+					_putchar(*format);
+			}
 			else
 			{
 				_putchar(*format);
