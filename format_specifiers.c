@@ -25,7 +25,7 @@ int str_print(va_list arg)
 
 	str = va_arg(arg, char *);
 	if (str == NULL)
-		return (-1);
+		str = "(null)";
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
