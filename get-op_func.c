@@ -57,6 +57,7 @@ int checker(const char *p, fmt_t f_list[])
 	{
 		if (*p == f_list[j].s[0])
 			return (1);
+		j++;
 	}
 	return (0);
 }
