@@ -18,7 +18,8 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 			if (*format == '%' && (format[1] == f_list[0].s[0] ||
 						format[1] == f_list[1].s[0] ||
 						format[1] == f_list[2].s[0] ||
-						format[1] == f_list[3].s[0]))
+						format[1] == f_list[3].s[0] ||
+						format[1] == f_list[4].s[0]))
 				state = 1;
 			else
 			{
@@ -34,8 +35,6 @@ int get_func(const char *format, fmt_t f_list[], va_list arg)
 				if (*format == f_list[j].s[0])
 				{
 					val = f_list[j].fmt_func(arg);
-					if (val == -1)
-						return (-1);
 					char_count += val;
 					break;
 				}

@@ -54,17 +54,9 @@ int percent_print(va_list arg __attribute__((unused)))
  */
 int int_print(va_list arg)
 {
-	int num, tmp;
+	int num;
 
-	num = va_arg(arg, int);
-
-	if (num > 0)
-	{
-		tmp = num / 10;
-		num = num % 10;
-	}
-	_putchar('0' + tmp);
-	_putchar('0' + num);
-	return (1);
+	num = num_print(arg);
+	return (num);
 }
 
