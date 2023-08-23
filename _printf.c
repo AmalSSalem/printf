@@ -29,6 +29,7 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 
 	char_count = get_func(format, f_list, arg);
+	_putchar(-1);
 	va_end(arg);
 	return (char_count);
 }
