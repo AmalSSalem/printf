@@ -32,5 +32,6 @@ int str_print(va_list);
 int percent_print(va_list);
 int int_print(va_list);
 int num_print(va_list);
+int bin_print(va_list ap);
 #endif
 
