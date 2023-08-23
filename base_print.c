@@ -7,20 +7,9 @@
  */
 int bin_print(va_list ap)
 {
-	unsigned int check_num;
-	int num, divisor = 1, int_count = 0;
-	char *bin_array;
+	unsigned int num = va_arg(ap, unsigned int);
+	char *str = convert(num, 2, 0);
 
-	num = va_arg(ap, unsigned int);
-	bin_array = malloc(ceil(log2(num)));
-	/* ceil to round up */
-	while (num != 0)
-	{
-		check_num = num % 2;
-		_putchar('0' + (check_num));
-		num /= 2;
-	}
-
-	return (ceil(log2(num)));
+	return (_puts(str));
 }
 
