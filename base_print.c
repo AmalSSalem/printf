@@ -23,3 +23,4 @@ int bin_print(va_list ap)
 
 	return (ceil(log2(num)));
 }
+
