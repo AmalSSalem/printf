@@ -22,6 +22,7 @@ struct prnt
 typedef struct prnt fmt_t;
 /************** FUNCTIONS ****************/
 int _printf(const char *format, ...);
+int digit_counter(int num);
 int checker(const char *p, fmt_t f_list[]);
 int get_func(const char *, fmt_t f_list[], va_list);
 int _putchar(char c);

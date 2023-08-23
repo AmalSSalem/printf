@@ -12,6 +12,8 @@ int num_print(va_list ap)
 
 	ap_num = va_arg(ap, int);
 
+	int_count = digit_counter((ap_num < 0)? (ap_num*(-1)):(ap_num));	
+	
 	if (ap_num < 0)
 	{
 		int_count += _putchar('-');
@@ -20,12 +22,13 @@ int num_print(va_list ap)
 	else
 		check_num = ap_num;
 
+	
 	while (check_num / divisor > 9)
 		divisor *= 10;
 
 	while (divisor != 0)
 	{
-		int_count = _putchar('0' + (check_num / divisor));
+		_putchar('0' + (check_num / divisor));
 		check_num %= divisor;
 		divisor /= 10;
 	}
