@@ -8,10 +8,6 @@
  */
 int _putchar(char  c)
 {
-	char buffer[1024];
-	int length = snprintf(buffer, sizeof(buffer), "%s", c);
-
-	write(1, buffer, length);
-	return (length);
+	return (write(1, c, 1));
 }
 
