@@ -25,7 +25,7 @@ int num_print(va_list ap)
 
 	while (divisor != 0)
 	{
-		int_count = _putchar('0' + (check_num / divisor));
+		int_count += _putchar('0' + (check_num / divisor));
 		check_num %= divisor;
 		divisor /= 10;
 	}
