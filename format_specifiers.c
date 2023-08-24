@@ -59,4 +59,3 @@ int int_print(va_list arg)
 	n = num_print(arg);
 	return (n);
 }
-

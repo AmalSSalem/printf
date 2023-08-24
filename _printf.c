@@ -16,6 +16,12 @@ int _printf(const char *format, ...)
 		{"%", percent_print},
 		{"d", int_print},
 		{"i", int_print},
+		{"b", bin_print},
+		{"u", unsigned_print},
+		{"o", octal_print},
+		{"x", hexa_print},
+		{"X", HEXA_print},
+		{"p", address_print},
 		{NULL, NULL}
 	};
 

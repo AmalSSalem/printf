@@ -22,14 +22,24 @@ struct prnt
 typedef struct prnt fmt_t;
 /************** FUNCTIONS ****************/
 int _printf(const char *format, ...);
+int digit_counter(int num);
 int checker(const char *p, fmt_t f_list[]);
 int get_func(const char *, fmt_t f_list[], va_list);
 int _putchar(char c);
+int _puts(char *c);
+char *convert(unsigned long int num, int base, int lowercase);
 int get_op_func(const char *, fmt_t f_list[], va_list arg);
 int char_print(va_list);
 int str_print(va_list);
 int percent_print(va_list);
 int int_print(va_list);
+int unsigned_print(va_list);
 int num_print(va_list);
+int bin_print(va_list);
+int hexa_print(va_list);
+int HEXA_print(va_list);
+int octal_print(va_list);
+int address_print(va_list);
+
 #endif
 
