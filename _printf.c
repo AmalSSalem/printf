@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		{"d", int_print},
 		{"i", int_print},
 		{"b", bin_print},
-		{"u", unsigned_print}
+		{"u", unsigned_print},
 		{NULL, NULL}
 	};
 
