@@ -39,6 +39,7 @@ int bin_print(va_list);
 int hexa_print(va_list);
 int HEXA_print(va_list);
 int octal_print(va_list);
+int address_print(va_list);
 
 #endif
 

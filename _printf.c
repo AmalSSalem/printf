@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"o", octal_print},
 		{"x", hexa_print},
 		{"X", HEXA_print},
+		{"p", address_print},
 		{NULL, NULL}
 	};
 
