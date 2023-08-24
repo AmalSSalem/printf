@@ -65,4 +65,3 @@ int checker(const char *p, fmt_t f_list[])
 	}
 	return (0);
 }
-
