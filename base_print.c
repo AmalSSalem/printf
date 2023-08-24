@@ -15,8 +15,8 @@ int bin_print(va_list ap)
 
 /**
  * octal_print - printing octal
- * @ap: variadic list passed 
- * @return number of characters 
+ * @ap: variadic list passed
+ * Return: number of characters
  */
 int octal_print(va_list ap)
 {
@@ -28,8 +28,8 @@ int octal_print(va_list ap)
 
 /**
  * HEXA_print - printing hexa decimals uc
- * @ap: variadic list passed 
- * @return number of characters 
+ * @ap: variadic list passed
+ * Return: number of characters
  */
 int HEXA_print(va_list ap)
 {
@@ -41,8 +41,8 @@ int HEXA_print(va_list ap)
 
 /**
  * hexa_print - printing hexa decimals lc
- * @ap: variadic list passed 
- * @return number of characters 
+ * @ap: variadic list passed
+ * Return: number of characters
  */
 int hexa_print(va_list ap)
 {
@@ -53,9 +53,9 @@ int hexa_print(va_list ap)
 }
 
 /**
- * unsighed_print - printing usigned integers
- * @ap: variadic list passed 
- * @return number of characters 
+ * unsigned_print - printing usigned integers
+ * @ap: variadic list passed
+ * Return: number of characters
  */
 int unsigned_print(va_list ap)
 {

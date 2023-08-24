@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_address - prints address of input
+ * address_print - prints address of input
  * in hexa decimal format
  * @ap: va_list arguments from _printf
  * Return: number of char printed
