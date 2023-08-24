@@ -23,7 +23,6 @@ int _putchar(char c)
 	return (1);
 }
 
-
 /**
  * _puts - prints a string to stdout
  * @str: pointer string to print
